@@ -23,8 +23,9 @@ public class Controller {
 
     @GetMapping("string")
     @ResponseBody
-    public String String(@RequestParam("ran") String name) {
-        return "hello" + name;
+    public String String(@RequestParam("ran") String name)
+    {
+        return "hello" + name;   //hello ran
     }
 
         @GetMapping("api")
@@ -35,14 +36,14 @@ public class Controller {
             return hello;
         }
 
-    static class Hello {
-        private String name;
+            static class Hello {
+                private String name;
 
-        public String getName() {
-            return name;
-        }
-        public void setName(String name) {
-            this.name = name;
-        }
-    }
+                public String getName() {
+                    return name;
+                }
+                public void setName(String name) {
+                    this.name = name;
+                }
+            }
 }
