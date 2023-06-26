@@ -2,9 +2,11 @@ package hello.member.repository;
 
 
 import hello.member.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
     private static Map<Long, Member> store = new HashMap<>();
     private static long sequence = 0L;
@@ -35,5 +37,3 @@ public class MemoryMemberRepository implements MemberRepository {
 }
 
 
-
-}
